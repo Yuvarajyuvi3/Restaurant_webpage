@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TasteBite Restaurant</title>
+  <!-- <link rel="stylesheet" href="Restaurant.css" /> -->
+   <style>
+    /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #333;
+}
+.logo span {
+  color: #e63946;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #e63946;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url("backimage.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 80px;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+ 
+}
+.hero-content p {
+  margin: 10px 0 20px;
+  font-size: 1.2rem;
+}
+.btn {
+  background: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #d62828;
+}
+
+/* Menu Section */
+.menu {
+  padding: 80px 40px;
+  text-align: center;
+}
+.menu h2 {
+  margin-bottom: 40px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.menu-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.menu-item h3 {
+  margin: 15px 0 5px;
+}
+.menu-item p {
+  padding: 0 15px;
+  color: #666;
+}
+.menu-item span {
+  display: block;
+  margin: 15px 0;
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* About Section */
+.about {
+  background: #f9f9f9;
+  padding: 80px 40px;
+}
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+.about-container img {
+  flex: 1 1 400px;
+  border-radius: 10px;
+}
+.about-text {
+  flex: 1 1 400px;
+}
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 40px;
+  text-align: center;
+}
+.contact h2 {
+  margin-bottom: 20px;
+}
+.contact p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+   </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Taste<span>Bite</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to TasteBite</h2>
+      <p>Delicious meals made with love and passion</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="1.jpg" alt="Pizza">
+        <h3>Classic Pizza</h3>
+        <p>Freshly baked pizza with mozzarella and basil.</p>
+        <span>$12</span>
+      </div>
+      <div class="menu-item">
+        <img src="2.webp" alt="Pasta">
+        <h3>Creamy Pasta</h3>
+        <p>Rich and creamy sauce with handmade pasta.</p>
+        <span>$10</span>
+      </div>
+      <div class="menu-item">
+        <img src="3.jpg" alt="Salad">
+        <h3>Green Salad</h3>
+        <p>Healthy and fresh greens with vinaigrette.</p>
+        <span>$8</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <img src="4.jpg" alt="About Us">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>At TasteBite, we believe that good food brings people together. Our chefs use only the freshest ingredients to create unforgettable flavors that will leave you wanting more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>123 Main Street, Food City</p>
+    <p>Email: info@tastebite.com | Phone: (123) 456-7890</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TasteBite Restaurant | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
